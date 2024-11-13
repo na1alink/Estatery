@@ -53,17 +53,17 @@
   }
 
   &__swiper {
-    // padding-right: 30rem;
-
-    display: flex;
-    overflow-x: scroll;
-    width: 100%;
-    gap: 32rem;
-    scrollbar-width: none;
-
+    padding-right: 30rem;
     @include mixins.breakpoint(medium) {
-      flex-direction: column;
-      gap: 25rem;
+      padding-right: 0rem;
+    }
+
+    &-wrapper {
+      @include mixins.breakpoint(medium) {
+        display: flex;
+        flex-direction: column;
+        gap: 25rem;
+      }
     }
   }
   &__slide {
@@ -164,6 +164,7 @@
     position: relative;
 
     padding: 40rem;
+
     @include mixins.breakpoint(medium) {
       padding: 48rem 40rem;
     }

@@ -1,12 +1,17 @@
 import "./assets/scss/main.scss";
 
-const swiper = new Swiper(".swiper", {
-  slidesPerView: "auto",
-  spaceBetween: 32,
-  mousewheel: {
-    sensitivity: 1,
-  },
-});
+function initSwiper() {
+  if (window.innerWidth >= 768) {
+    const swiper = new Swiper(".features__swiper", {
+      slidesPerView: "auto",
+      spaceBetween: 32,
+    });
+  }
+}
+
+window.addEventListener("load", initSwiper);
+
+window.addEventListener("resize", initSwiper);
 
 function closeMenu() {
   const burger = document.querySelector(".burger");
@@ -77,18 +82,15 @@ document.addEventListener("DOMContentLoaded", function () {
     button.addEventListener("click", function () {
       const targetId = this.getAttribute("data-target");
 
-      // Убираем активный класс у всех кнопок
       buttons.forEach((btn) => btn.classList.remove("active"));
-      // Добавляем активный класс к текущей кнопке
+
       this.classList.add("active");
 
-      // Скрываем все блоки с домами
       items.forEach((item) => (item.style.display = "none"));
-      // Показываем блок с соответствующим ID
+
       document.getElementById(targetId).style.display = "grid";
     });
   });
 
-  // Устанавливаем первый блок как активный при загрузке страницы
   document.getElementById("Rent").style.display = "grid";
 });
