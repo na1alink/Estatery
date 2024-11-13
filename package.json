@@ -11,5 +11,8 @@
   "devDependencies": {
     "sass": "^1.80.7",
     "vite": "^5.4.10"
+  },
+  "dependencies": {
+    "vite-plugin-sass": "^0.1.0"
   }
 }
