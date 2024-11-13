@@ -1,0 +1,1369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estatery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <div class="header__logo">
+          <svg
+            class="header__logo-icon"
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-path="url(#clip0_29224_117)">
+              <path
+                d="M25.3333 11.6133L18.2226 6.08264C17.5986 5.59719 16.8306 5.33362 16.04 5.33362C15.2494 5.33362 14.4813 5.59719 13.8573 6.08264L6.74529 11.6133C6.31788 11.9457 5.97208 12.3713 5.7343 12.8578C5.49651 13.3442 5.37304 13.8785 5.37329 14.42V24.02C5.37329 24.7272 5.65424 25.4055 6.15434 25.9056C6.65444 26.4057 7.33271 26.6866 8.03996 26.6866H24.04C24.7472 26.6866 25.4255 26.4057 25.9256 25.9056C26.4257 25.4055 26.7066 24.7272 26.7066 24.02V14.42C26.7066 13.3226 26.2 12.2866 25.3333 11.6133Z"
+                fill="#7065F0"
+                stroke="#7065F0"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M21.3334 20C18.3867 21.7773 13.6107 21.7773 10.6667 20"
+                stroke="#F9FAFB"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_29224_117">
+                <rect width="32" height="32" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+          <span class="header__logo-text">Estatery</span>
+        </div>
+
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">Rent</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">Buy</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">Sell</a>
+            </li>
+            <li class="header__nav-item has-dropdown">
+              <a class="header__nav-link" href="#">
+                Manage Property
+                <svg
+                  class="header__nav-icon"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_29248_135)">
+                    <path
+                      d="M3.33334 5.66663L8 10.3333L12.6667 5.66663"
+                      stroke="#000929"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_29248_135">
+                      <rect width="16" height="16" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </a>
+              <ul class="header__nav-dropdown">
+                <li><a href="#">List Property</a></li>
+                <li><a href="#">Tenant Management</a></li>
+                <li><a href="#">Maintenance Requests</a></li>
+                <li><a href="#">Financial Reports</a></li>
+              </ul>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#"> Resources</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header__actions">
+          <button
+            class="btn header__action-button header__action-button--login"
+          >
+            Login
+          </button>
+          <button
+            class="btn-second header__action-button header__action-button--signup"
+          >
+            Sign up
+          </button>
+        </div>
+
+        <button type="button" class="header__burger burger" id="burger">
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </button>
+      </div>
+    </header>
+
+    <div class="header__menu menu">
+      <nav class="menu__nav">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link menu__link-close">
+              <img
+                src="./src/assets/images/close.svg"
+                alt="close-btn"
+                class="menu__link-close__img"
+              />
+            </a>
+          </li>
+
+          <li class="menu__item">
+            <a href="#" class="menu__link">Rent</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link"> Buy </a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link"> Sell </a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">
+              Manage Property
+              <span class="menu__icon-wrap">
+                <svg
+                  class="menu__icon"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_29248_135)">
+                    <path
+                      d="M3.33334 5.66663L8 10.3333L12.6667 5.66663"
+                      stroke="#ffffff"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_29248_135">
+                      <rect width="16" height="16" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </span>
+            </a>
+            <ul class="menu__dropdown">
+              <li><a href="#">List Property</a></li>
+              <li><a href="#">Tenant Management</a></li>
+              <li><a href="#">Maintenance Requests</a></li>
+              <li><a href="#">Financial Reports</a></li>
+            </ul>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link"> Resources </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <main class="main">
+      <section class="hero">
+        <div class="container hero__container">
+          <div class="hero__left">
+            <div class="hero__left-text">
+              <h1>Buy, rent, or&nbsp;sell your property easily</h1>
+              <p>
+                A&nbsp;great platform to&nbsp;buy, sell, or&nbsp;even rent your
+                properties without any commisions.
+              </p>
+            </div>
+            <div class="hero__stats">
+              <div class="hero__stat">
+                <figure>
+                  <img
+                    src="./src/assets/images/hero-renters.svg"
+                    alt="50k+ renters"
+                  />
+                  <figcaption>
+                    <h2>50k+ renters</h2>
+                    <p>believe in&nbsp;our service</p>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="hero__stat">
+                <figure>
+                  <img
+                    src="./src/assets/images/hero-properties.svg"
+                    alt="10k+ properties"
+                  />
+                  <figcaption>
+                    <h2>10k+ properties</h2>
+                    <p><span>and house</span> ready for occupancy</p>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div class="hero__rigth">
+            <div class="hero__testimonial">
+              <figure class="hero__testimonial-top">
+                <img
+                  src="./src/assets/images/hero-photo.webp"
+                  alt="Manuel Villa"
+                />
+                <figcaption class="hero__testimonial-info">
+                  <h3>Manuel Villa</h3>
+                  <h4>Renter</h4>
+                  <div>
+                    <p>Moved with</p>
+                    <span>Estatery</span>
+                  </div>
+                </figcaption>
+              </figure>
+              <blockquote class="hero__testimonial-quote">
+                <img src="./src/assets/images/hero-marker.svg" alt="" />
+                <p>
+                  I&nbsp;loved how smooth the move was, and finally got the
+                  house we&nbsp;wanted.
+                </p>
+              </blockquote>
+              <div class="hero__testimonial-details">
+                <div class="hero__testimonial-detail">
+                  <span>$1,500</span>
+                  <p>Saved up to</p>
+                </div>
+                <div class="hero__testimonial-detail">
+                  <span>-24 hrs</span>
+                  <p>Process time</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hero__rating">
+            <div class="hero__rating-top">
+              <h4>Excellent</h4>
+              <img src="./src/assets/images/trustpilot.svg" alt="trustpilot" />
+            </div>
+            <div class="hero__rating-stars">
+              <img src="./src/assets/images/star.svg" alt="star" />
+              <img src="./src/assets/images/star.svg" alt="star" />
+              <img src="./src/assets/images/star.svg" alt="star" />
+              <img src="./src/assets/images/star.svg" alt="star" />
+              <img src="./src/assets/images/star.svg" alt="star" />
+            </div>
+            <div class="hero__rating-descr"><p>From&nbsp;3,264 reviews</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="benefit section-offset">
+        <div class="benefit__container container">
+          <div class="benefit__intro">
+            <h2 class="benefit__title">The new way to find your new home</h2>
+            <p class="benefit__description">
+              Find your dream place to&nbsp;live in&nbsp;with more than 10k+
+              properties listed.
+            </p>
+            <button class="benefit__button btn-dark">Browse Properties</button>
+          </div>
+
+          <div class="benefit__features">
+            <div class="benefit__feature">
+              <img
+                src="./src/assets/images/Icon-1.svg"
+                alt="Property Insurance"
+              />
+              <div class="benefit__feature-text">
+                <h3 class="benefit__feature-title">Property Insurance</h3>
+                <p class="benefit__feature-description">
+                  We&nbsp;offer our customer property protection
+                  of&nbsp;liability coverage and insurance for their better
+                  life.
+                </p>
+              </div>
+            </div>
+            <div class="benefit__feature">
+              <img src="./src/assets/images/Icon-2.svg" alt="Best Price" />
+              <div class="benefit__feature-text">
+                <h3 class="benefit__feature-title">Best Price</h3>
+                <p class="benefit__feature-description">
+                  Not sure what you should be&nbsp;charging for your property?
+                  No&nbsp;need to&nbsp;worry, let&nbsp;us do&nbsp;the numbers
+                  for you.
+                </p>
+              </div>
+            </div>
+            <div class="benefit__feature">
+              <img
+                src="./src/assets/images/Icon-3.svg"
+                alt="Lowest Commission"
+              />
+              <div class="benefit__feature-text">
+                <h4 class="benefit__feature-title">Lowest Commission</h4>
+                <p class="benefit__feature-description">
+                  You no&nbsp;longer have to&nbsp;negotiate commissions and
+                  haggle with other agents it&nbsp;only cost&nbsp;2%!
+                </p>
+              </div>
+            </div>
+            <div class="benefit__feature">
+              <img
+                src="./src/assets/images/Icon-4.svg"
+                alt="Property Insurance"
+              />
+              <div class="benefit__feature-text">
+                <h3 class="benefit__feature-title">Overall Control</h3>
+                <p class="benefit__feature-description">
+                  Get a&nbsp;virtual tour, and schedule visits before you rent
+                  or&nbsp;buy any properties. You get overall control.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="property-list section-offset">
+        <div class="container property-list__container">
+          <header class="property-list__header">
+            <h2 class="property-list__title">Based on your location</h2>
+            <p class="property-list__description">
+              Some of&nbsp;our picked properties near you location.
+            </p>
+          </header>
+
+          <div class="property-list__actions">
+            <div class="property-list__buttons">
+              <button class="property-list__button active" data-target="Rent">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M16.4917 12.4416C14.775 14.1499 12.3167 14.6749 10.1583 13.9999L6.23334 17.9166C5.95001 18.2083 5.39168 18.3833 4.99168 18.3249L3.17501 18.0749C2.57501 17.9916 2.01668 17.4249 1.92501 16.8249L1.67501 15.0083C1.61668 14.6083 1.80834 14.0499 2.08334 13.7666L6.00001 9.84994C5.33334 7.68327 5.85001 5.22494 7.56668 3.5166C10.025 1.05827 14.0167 1.05827 16.4833 3.5166C18.95 5.97494 18.95 9.98327 16.4917 12.4416Z"
+                    stroke="#100A55"
+                    stroke-width="2"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M5.74167 14.575L7.65833 16.4916"
+                    stroke="#100A55"
+                    stroke-width="2"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M12.0833 9.16675C12.7737 9.16675 13.3333 8.6071 13.3333 7.91675C13.3333 7.22639 12.7737 6.66675 12.0833 6.66675C11.393 6.66675 10.8333 7.22639 10.8333 7.91675C10.8333 8.6071 11.393 9.16675 12.0833 9.16675Z"
+                    stroke="#100A55"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span>Rent</span>
+              </button>
+              <button class="property-list__button" data-target="Buy">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14.1667 17.0834H5.83332C3.33332 17.0834 1.66666 15.8334 1.66666 12.9167V7.08341C1.66666 4.16675 3.33332 2.91675 5.83332 2.91675H14.1667C16.6667 2.91675 18.3333 4.16675 18.3333 7.08341V12.9167C18.3333 15.8334 16.6667 17.0834 14.1667 17.0834Z"
+                    stroke="#100A55"
+                    stroke-width="2"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M10 12.5C11.3807 12.5 12.5 11.3807 12.5 10C12.5 8.61929 11.3807 7.5 10 7.5C8.61929 7.5 7.5 8.61929 7.5 10C7.5 11.3807 8.61929 12.5 10 12.5Z"
+                    stroke="#100A55"
+                    stroke-width="2"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M4.58334 7.91675V12.0834"
+                    stroke="#100A55"
+                    stroke-width="2"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M15.4167 7.91675V12.0834"
+                    stroke="#100A55"
+                    stroke-width="2"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span> Buy</span>
+              </button>
+              <button class="property-list__button" data-target="Sell">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_29224_53)">
+                    <path
+                      d="M17.2604 6.56848L11.7052 2.25163C11.2177 1.87272 10.6177 1.66699 10 1.66699C9.38234 1.66699 8.78231 1.87272 8.2948 2.25163L2.73855 6.56848C2.40463 6.82791 2.13448 7.16015 1.94871 7.53982C1.76294 7.91949 1.66647 8.33656 1.66667 8.75916V16.2522C1.66667 16.8043 1.88617 17.3337 2.27687 17.724C2.66757 18.1144 3.19747 18.3337 3.75001 18.3337H16.25C16.8025 18.3337 17.3324 18.1144 17.7231 17.724C18.1138 17.3337 18.3333 16.8043 18.3333 16.2522V8.75916C18.3333 7.90266 17.9375 7.09403 17.2604 6.56848Z"
+                      stroke="#100A55"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_29224_53">
+                      <rect width="20" height="20" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <span>Sell</span>
+              </button>
+            </div>
+            <div class="property-list__search">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z"
+                  stroke="#7065F0"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M22 22L20 20"
+                  stroke="#7065F0"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <input
+                type="text"
+                class="property-list__search-input"
+                placeholder="Search..."
+              />
+            </div>
+          </div>
+          <div class="property-list__items active" id="Rent">
+            <article class="property-list__item">
+              <a href="#" class="property-list__item-link">
+                <figure class="property-list__item-image">
+                  <img src="./src/assets/images/house-1.png" alt="House" />
+                  <div class="property-list__item-tag">
+                    <img src="./src/assets/images/popular.svg" alt="popular" />
+                  </div>
+                </figure>
+                <div class="property-list__item-info">
+                  <div class="property-list__item-details">
+                    <div class="property-list__item-top">
+                      <div class="property-list__item-price">
+                        <span>$2,095</span> <span>/month</span>
+                      </div>
+                      <button class="property-list__item-favorite">
+                        <svg
+                          width="48"
+                          height="48"
+                          viewBox="0 0 48 48"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <circle
+                            cx="24"
+                            cy="24"
+                            r="23.25"
+                            fill="white"
+                            stroke="#E8E6F9"
+                            stroke-width="1.5"
+                          />
+                          <path
+                            d="M16.318 18.318C15.9001 18.7359 15.5687 19.232 15.3425 19.778C15.1164 20.3239 15 20.9091 15 21.5C15 22.091 15.1164 22.6762 15.3425 23.2221C15.5687 23.7681 15.9001 24.2642 16.318 24.682L24 32.364L31.682 24.682C32.5259 23.8381 33 22.6935 33 21.5C33 20.3066 32.5259 19.162 31.682 18.318C30.8381 17.4741 29.6935 17 28.5 17C27.3065 17 26.1619 17.4741 25.318 18.318L24 19.636L22.682 18.318C22.2641 17.9002 21.7681 17.5687 21.2221 17.3425C20.6761 17.1164 20.091 17 19.5 17C18.9091 17 18.3239 17.1164 17.7779 17.3425C17.232 17.5687 16.7359 17.9002 16.318 18.318V18.318Z"
+                            stroke="#7065F0"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                    <h3 class="property-list__item-title">Palm Harbor</h3>
+                    <p class="property-list__item-address">
+                      <span>2699 Green Valley,</span> Highland Lake, FL
+                    </p>
+                  </div>
+                  <div class="property-list__item-features">
+                    <div class="property-list__item-feature">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M17.4998 8.98317V6.6665C17.4998 5.2915 16.3748 4.1665 14.9998 4.1665H11.6665C11.0248 4.1665 10.4415 4.4165 9.99984 4.8165C9.55817 4.4165 8.97484 4.1665 8.33317 4.1665H4.99984C3.62484 4.1665 2.49984 5.2915 2.49984 6.6665V8.98317C1.9915 9.4415 1.6665 10.0998 1.6665 10.8332V15.8332H3.33317V14.1665H16.6665V15.8332H18.3332V10.8332C18.3332 10.0998 18.0082 9.4415 17.4998 8.98317ZM11.6665 5.83317H14.9998C15.4582 5.83317 15.8332 6.20817 15.8332 6.6665V8.33317H10.8332V6.6665C10.8332 6.20817 11.2082 5.83317 11.6665 5.83317ZM4.1665 6.6665C4.1665 6.20817 4.5415 5.83317 4.99984 5.83317H8.33317C8.7915 5.83317 9.1665 6.20817 9.1665 6.6665V8.33317H4.1665V6.6665ZM3.33317 12.4998V10.8332C3.33317 10.3748 3.70817 9.99984 4.1665 9.99984H15.8332C16.2915 9.99984 16.6665 10.3748 16.6665 10.8332V12.4998H3.33317Z"
+                          fill="#7065F0"
+                        />
+                      </svg>
+                      <div>3 <span>Beds</span></div>
+                    </div>
+                    <div class="property-list__item-feature">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M17.4998 8.33333H5.83317V5.83333C5.83317 4.91417 6.58067 4.16667 7.49984 4.16667C8.419 4.16667 9.1665 4.91417 9.1665 5.83333H10.8332C10.8332 3.995 9.33817 2.5 7.49984 2.5C5.6615 2.5 4.1665 3.995 4.1665 5.83333V8.33333H2.49984C2.27882 8.33333 2.06686 8.42113 1.91058 8.57741C1.7543 8.73369 1.6665 8.94565 1.6665 9.16667V10.8333C1.6665 13.005 3.0615 14.8525 4.99984 15.5417V18.3333H6.6665V15.8333H13.3332V18.3333H14.9998V15.5417C16.9382 14.8525 18.3332 13.005 18.3332 10.8333V9.16667C18.3332 8.94565 18.2454 8.73369 18.0891 8.57741C17.9328 8.42113 17.7209 8.33333 17.4998 8.33333ZM16.6665 10.8333C16.6665 12.6717 15.1715 14.1667 13.3332 14.1667H6.6665C4.82817 14.1667 3.33317 12.6717 3.33317 10.8333V10H16.6665V10.8333Z"
+                          fill="#7065F0"
+                        />
+                      </svg>
+                      <div>2 <span>Bathrooms</span></div>
+                    </div>
+                    <div class="property-list__item-feature">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_601_1202)">
+                          <path
+                            d="M8.83148 15.5437L3.45631 10.1685C2.8479 9.56011 2.8479 8.43989 3.45631 7.83148L8.83148 2.45631C9.43989 1.8479 10.5601 1.8479 11.1685 2.45631L16.5437 7.83148C17.1521 8.43989 17.1521 9.56011 16.5437 10.1685L11.1685 15.5437C10.5601 16.1521 9.43989 16.1521 8.83148 15.5437V15.5437Z"
+                            stroke="#7065F0"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M2 13.1714L6.36371 17.5351"
+                            stroke="#7065F0"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M13.6362 17.5351L17.9999 13.1714"
+                            stroke="#7065F0"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_601_1202">
+                            <rect width="20" height="20" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <div>5x7 m²</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </article>
+            <article class="property-list__item">
+              <a href="#" class="property-list__item-link">
+                <figure class="property-list__item-image">
+                  <img src="./src/assets/images/house-2.png" alt="House" />
+                  <div class="property-list__item-tag">
+                    <img src="./src/assets/images/popular.svg" alt="popular" />
+                  </div>
+                </figure>
+
+                <div class="property-list__item-info">
+                  <div class="property-list__item-details">
+                    <div class="property-list__item-top">
+                      <div class="property-list__item-price">
+                        <span>$2,700</span> <span>/month</span>
+                      </div>
+
+                      <button class="property-list__item-favorite">
+                        <svg
+                          width="48"
+                          height="48"
+                          viewBox="0 0 48 48"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <circle
+                            cx="24"
+                            cy="24"
+                            r="23.25"
+                            fill="white"
+                            stroke="#E8E6F9"
+                            stroke-width="1.5"
+                          />
+                          <path
+                            d="M16.318 18.318C15.9001 18.7359 15.5687 19.232 15.3425 19.778C15.1164 20.3239 15 20.9091 15 21.5C15 22.091 15.1164 22.6762 15.3425 23.2221C15.5687 23.7681 15.9001 24.2642 16.318 24.682L24 32.364L31.682 24.682C32.5259 23.8381 33 22.6935 33 21.5C33 20.3066 32.5259 19.162 31.682 18.318C30.8381 17.4741 29.6935 17 28.5 17C27.3065 17 26.1619 17.4741 25.318 18.318L24 19.636L22.682 18.318C22.2641 17.9002 21.7681 17.5687 21.2221 17.3425C20.6761 17.1164 20.091 17 19.5 17C18.9091 17 18.3239 17.1164 17.7779 17.3425C17.232 17.5687 16.7359 17.9002 16.318 18.318V18.318Z"
+                            stroke="#7065F0"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                    <h3 class="property-list__item-title">
+                      Beverly Springfield
+                    </h3>
+                    <p class="property-list__item-address">
+                      <span>2821 Lake Sevilla, </span>Palm Harbor, TX
+                    </p>
+                  </div>
+                  <div class="property-list__item-features">
+                    <div class="property-list__item-feature">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M17.4998 8.98317V6.6665C17.4998 5.2915 16.3748 4.1665 14.9998 4.1665H11.6665C11.0248 4.1665 10.4415 4.4165 9.99984 4.8165C9.55817 4.4165 8.97484 4.1665 8.33317 4.1665H4.99984C3.62484 4.1665 2.49984 5.2915 2.49984 6.6665V8.98317C1.9915 9.4415 1.6665 10.0998 1.6665 10.8332V15.8332H3.33317V14.1665H16.6665V15.8332H18.3332V10.8332C18.3332 10.0998 18.0082 9.4415 17.4998 8.98317ZM11.6665 5.83317H14.9998C15.4582 5.83317 15.8332 6.20817 15.8332 6.6665V8.33317H10.8332V6.6665C10.8332 6.20817 11.2082 5.83317 11.6665 5.83317ZM4.1665 6.6665C4.1665 6.20817 4.5415 5.83317 4.99984 5.83317H8.33317C8.7915 5.83317 9.1665 6.20817 9.1665 6.6665V8.33317H4.1665V6.6665ZM3.33317 12.4998V10.8332C3.33317 10.3748 3.70817 9.99984 4.1665 9.99984H15.8332C16.2915 9.99984 16.6665 10.3748 16.6665 10.8332V12.4998H3.33317Z"
+                          fill="#7065F0"
+                        />
+                      </svg>
+                      <div>4 <span>Beds</span></div>
+                    </div>
+                    <div class="property-list__item-feature">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M17.4998 8.33333H5.83317V5.83333C5.83317 4.91417 6.58067 4.16667 7.49984 4.16667C8.419 4.16667 9.1665 4.91417 9.1665 5.83333H10.8332C10.8332 3.995 9.33817 2.5 7.49984 2.5C5.6615 2.5 4.1665 3.995 4.1665 5.83333V8.33333H2.49984C2.27882 8.33333 2.06686 8.42113 1.91058 8.57741C1.7543 8.73369 1.6665 8.94565 1.6665 9.16667V10.8333C1.6665 13.005 3.0615 14.8525 4.99984 15.5417V18.3333H6.6665V15.8333H13.3332V18.3333H14.9998V15.5417C16.9382 14.8525 18.3332 13.005 18.3332 10.8333V9.16667C18.3332 8.94565 18.2454 8.73369 18.0891 8.57741C17.9328 8.42113 17.7209 8.33333 17.4998 8.33333ZM16.6665 10.8333C16.6665 12.6717 15.1715 14.1667 13.3332 14.1667H6.6665C4.82817 14.1667 3.33317 12.6717 3.33317 10.8333V10H16.6665V10.8333Z"
+                          fill="#7065F0"
+                        />
+                      </svg>
+                      <div>2 <span>Bathrooms</span></div>
+                    </div>
+                    <div class="property-list__item-feature">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_601_1202)">
+                          <path
+                            d="M8.83148 15.5437L3.45631 10.1685C2.8479 9.56011 2.8479 8.43989 3.45631 7.83148L8.83148 2.45631C9.43989 1.8479 10.5601 1.8479 11.1685 2.45631L16.5437 7.83148C17.1521 8.43989 17.1521 9.56011 16.5437 10.1685L11.1685 15.5437C10.5601 16.1521 9.43989 16.1521 8.83148 15.5437V15.5437Z"
+                            stroke="#7065F0"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M2 13.1714L6.36371 17.5351"
+                            stroke="#7065F0"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M13.6362 17.5351L17.9999 13.1714"
+                            stroke="#7065F0"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_601_1202">
+                            <rect width="20" height="20" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <div>6x7.5 m²</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </article>
+            <article class="property-list__item">
+              <a href="#" class="property-list__item-link">
+                <figure class="property-list__item-image">
+                  <img src="./src/assets/images/house-3.png" alt="House" />
+                  <div class="property-list__item-tag">
+                    <img src="./src/assets/images/popular.svg" alt="popular" />
+                  </div>
+                </figure>
+
+                <div class="property-list__item-info">
+                  <div class="property-list__item-details">
+                    <div class="property-list__item-top">
+                      <div class="property-list__item-price">
+                        <span>$4,550</span> <span>/month</span>
+                      </div>
+
+                      <button class="property-list__item-favorite">
+                        <svg
+                          width="48"
+                          height="48"
+                          viewBox="0 0 48 48"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <circle
+                            cx="24"
+                            cy="24"
+                            r="23.25"
+                            fill="white"
+                            stroke="#E8E6F9"
+                            stroke-width="1.5"
+                          />
+                          <path
+                            d="M16.318 18.318C15.9001 18.7359 15.5687 19.232 15.3425 19.778C15.1164 20.3239 15 20.9091 15 21.5C15 22.091 15.1164 22.6762 15.3425 23.2221C15.5687 23.7681 15.9001 24.2642 16.318 24.682L24 32.364L31.682 24.682C32.5259 23.8381 33 22.6935 33 21.5C33 20.3066 32.5259 19.162 31.682 18.318C30.8381 17.4741 29.6935 17 28.5 17C27.3065 17 26.1619 17.4741 25.318 18.318L24 19.636L22.682 18.318C22.2641 17.9002 21.7681 17.5687 21.2221 17.3425C20.6761 17.1164 20.091 17 19.5 17C18.9091 17 18.3239 17.1164 17.7779 17.3425C17.232 17.5687 16.7359 17.9002 16.318 18.318V18.318Z"
+                            stroke="#7065F0"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                    <h3 class="property-list__item-title">Faulkner Ave</h3>
+                    <p class="property-list__item-address">
+                      <span>909 Woodland St,</span> Michigan, IN
+                    </p>
+                  </div>
+                  <div class="property-list__item-features">
+                    <div class="property-list__item-feature">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M17.4998 8.98317V6.6665C17.4998 5.2915 16.3748 4.1665 14.9998 4.1665H11.6665C11.0248 4.1665 10.4415 4.4165 9.99984 4.8165C9.55817 4.4165 8.97484 4.1665 8.33317 4.1665H4.99984C3.62484 4.1665 2.49984 5.2915 2.49984 6.6665V8.98317C1.9915 9.4415 1.6665 10.0998 1.6665 10.8332V15.8332H3.33317V14.1665H16.6665V15.8332H18.3332V10.8332C18.3332 10.0998 18.0082 9.4415 17.4998 8.98317ZM11.6665 5.83317H14.9998C15.4582 5.83317 15.8332 6.20817 15.8332 6.6665V8.33317H10.8332V6.6665C10.8332 6.20817 11.2082 5.83317 11.6665 5.83317ZM4.1665 6.6665C4.1665 6.20817 4.5415 5.83317 4.99984 5.83317H8.33317C8.7915 5.83317 9.1665 6.20817 9.1665 6.6665V8.33317H4.1665V6.6665ZM3.33317 12.4998V10.8332C3.33317 10.3748 3.70817 9.99984 4.1665 9.99984H15.8332C16.2915 9.99984 16.6665 10.3748 16.6665 10.8332V12.4998H3.33317Z"
+                          fill="#7065F0"
+                        />
+                      </svg>
+                      <div>4 <span>Beds</span></div>
+                    </div>
+                    <div class="property-list__item-feature">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M17.4998 8.33333H5.83317V5.83333C5.83317 4.91417 6.58067 4.16667 7.49984 4.16667C8.419 4.16667 9.1665 4.91417 9.1665 5.83333H10.8332C10.8332 3.995 9.33817 2.5 7.49984 2.5C5.6615 2.5 4.1665 3.995 4.1665 5.83333V8.33333H2.49984C2.27882 8.33333 2.06686 8.42113 1.91058 8.57741C1.7543 8.73369 1.6665 8.94565 1.6665 9.16667V10.8333C1.6665 13.005 3.0615 14.8525 4.99984 15.5417V18.3333H6.6665V15.8333H13.3332V18.3333H14.9998V15.5417C16.9382 14.8525 18.3332 13.005 18.3332 10.8333V9.16667C18.3332 8.94565 18.2454 8.73369 18.0891 8.57741C17.9328 8.42113 17.7209 8.33333 17.4998 8.33333ZM16.6665 10.8333C16.6665 12.6717 15.1715 14.1667 13.3332 14.1667H6.6665C4.82817 14.1667 3.33317 12.6717 3.33317 10.8333V10H16.6665V10.8333Z"
+                          fill="#7065F0"
+                        />
+                      </svg>
+                      <div>3 <span>Bathrooms</span></div>
+                    </div>
+                    <div class="property-list__item-feature">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_601_1202)">
+                          <path
+                            d="M8.83148 15.5437L3.45631 10.1685C2.8479 9.56011 2.8479 8.43989 3.45631 7.83148L8.83148 2.45631C9.43989 1.8479 10.5601 1.8479 11.1685 2.45631L16.5437 7.83148C17.1521 8.43989 17.1521 9.56011 16.5437 10.1685L11.1685 15.5437C10.5601 16.1521 9.43989 16.1521 8.83148 15.5437V15.5437Z"
+                            stroke="#7065F0"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M2 13.1714L6.36371 17.5351"
+                            stroke="#7065F0"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M13.6362 17.5351L17.9999 13.1714"
+                            stroke="#7065F0"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_601_1202">
+                            <rect width="20" height="20" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <div>8x10 m²</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </div>
+          <div class="property-list__items" id="Buy">
+            <article class="property-list__item">
+              <a href="#" class="property-list__item-link">
+                <figure class="property-list__item-image">
+                  <img src="./src/assets/images/house-1.png" alt="House" />
+                  <div class="property-list__item-tag">
+                    <img src="./src/assets/images/popular.svg" alt="popular" />
+                  </div>
+                </figure>
+                <div class="property-list__item-info">
+                  <div class="property-list__item-details">
+                    <div class="property-list__item-top">
+                      <div class="property-list__item-price">
+                        <span>Buy</span> <span>/month</span>
+                      </div>
+                      <button class="property-list__item-favorite">
+                        <svg
+                          width="48"
+                          height="48"
+                          viewBox="0 0 48 48"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <circle
+                            cx="24"
+                            cy="24"
+                            r="23.25"
+                            fill="white"
+                            stroke="#E8E6F9"
+                            stroke-width="1.5"
+                          />
+                          <path
+                            d="M16.318 18.318C15.9001 18.7359 15.5687 19.232 15.3425 19.778C15.1164 20.3239 15 20.9091 15 21.5C15 22.091 15.1164 22.6762 15.3425 23.2221C15.5687 23.7681 15.9001 24.2642 16.318 24.682L24 32.364L31.682 24.682C32.5259 23.8381 33 22.6935 33 21.5C33 20.3066 32.5259 19.162 31.682 18.318C30.8381 17.4741 29.6935 17 28.5 17C27.3065 17 26.1619 17.4741 25.318 18.318L24 19.636L22.682 18.318C22.2641 17.9002 21.7681 17.5687 21.2221 17.3425C20.6761 17.1164 20.091 17 19.5 17C18.9091 17 18.3239 17.1164 17.7779 17.3425C17.232 17.5687 16.7359 17.9002 16.318 18.318V18.318Z"
+                            stroke="#7065F0"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                    <h3 class="property-list__item-title">Palm Harbor</h3>
+                    <p class="property-list__item-address">
+                      <span>2699 Green Valley,</span> Highland Lake, FL
+                    </p>
+                  </div>
+                  <div class="property-list__item-features">
+                    <div class="property-list__item-feature">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M17.4998 8.98317V6.6665C17.4998 5.2915 16.3748 4.1665 14.9998 4.1665H11.6665C11.0248 4.1665 10.4415 4.4165 9.99984 4.8165C9.55817 4.4165 8.97484 4.1665 8.33317 4.1665H4.99984C3.62484 4.1665 2.49984 5.2915 2.49984 6.6665V8.98317C1.9915 9.4415 1.6665 10.0998 1.6665 10.8332V15.8332H3.33317V14.1665H16.6665V15.8332H18.3332V10.8332C18.3332 10.0998 18.0082 9.4415 17.4998 8.98317ZM11.6665 5.83317H14.9998C15.4582 5.83317 15.8332 6.20817 15.8332 6.6665V8.33317H10.8332V6.6665C10.8332 6.20817 11.2082 5.83317 11.6665 5.83317ZM4.1665 6.6665C4.1665 6.20817 4.5415 5.83317 4.99984 5.83317H8.33317C8.7915 5.83317 9.1665 6.20817 9.1665 6.6665V8.33317H4.1665V6.6665ZM3.33317 12.4998V10.8332C3.33317 10.3748 3.70817 9.99984 4.1665 9.99984H15.8332C16.2915 9.99984 16.6665 10.3748 16.6665 10.8332V12.4998H3.33317Z"
+                          fill="#7065F0"
+                        />
+                      </svg>
+                      <div>3 <span>Beds</span></div>
+                    </div>
+                    <div class="property-list__item-feature">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M17.4998 8.33333H5.83317V5.83333C5.83317 4.91417 6.58067 4.16667 7.49984 4.16667C8.419 4.16667 9.1665 4.91417 9.1665 5.83333H10.8332C10.8332 3.995 9.33817 2.5 7.49984 2.5C5.6615 2.5 4.1665 3.995 4.1665 5.83333V8.33333H2.49984C2.27882 8.33333 2.06686 8.42113 1.91058 8.57741C1.7543 8.73369 1.6665 8.94565 1.6665 9.16667V10.8333C1.6665 13.005 3.0615 14.8525 4.99984 15.5417V18.3333H6.6665V15.8333H13.3332V18.3333H14.9998V15.5417C16.9382 14.8525 18.3332 13.005 18.3332 10.8333V9.16667C18.3332 8.94565 18.2454 8.73369 18.0891 8.57741C17.9328 8.42113 17.7209 8.33333 17.4998 8.33333ZM16.6665 10.8333C16.6665 12.6717 15.1715 14.1667 13.3332 14.1667H6.6665C4.82817 14.1667 3.33317 12.6717 3.33317 10.8333V10H16.6665V10.8333Z"
+                          fill="#7065F0"
+                        />
+                      </svg>
+                      <div>2 <span>Bathrooms</span></div>
+                    </div>
+                    <div class="property-list__item-feature">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_601_1202)">
+                          <path
+                            d="M8.83148 15.5437L3.45631 10.1685C2.8479 9.56011 2.8479 8.43989 3.45631 7.83148L8.83148 2.45631C9.43989 1.8479 10.5601 1.8479 11.1685 2.45631L16.5437 7.83148C17.1521 8.43989 17.1521 9.56011 16.5437 10.1685L11.1685 15.5437C10.5601 16.1521 9.43989 16.1521 8.83148 15.5437V15.5437Z"
+                            stroke="#7065F0"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M2 13.1714L6.36371 17.5351"
+                            stroke="#7065F0"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M13.6362 17.5351L17.9999 13.1714"
+                            stroke="#7065F0"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_601_1202">
+                            <rect width="20" height="20" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <div>5x7 m²</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </div>
+          <div class="property-list__items" id="Sell">
+            <article class="property-list__item">
+              <a href="#" class="property-list__item-link">
+                <figure class="property-list__item-image">
+                  <img src="./src/assets/images/house-1.png" alt="House" />
+                  <div class="property-list__item-tag">
+                    <img src="./src/assets/images/popular.svg" alt="popular" />
+                  </div>
+                </figure>
+                <div class="property-list__item-info">
+                  <div class="property-list__item-details">
+                    <div class="property-list__item-top">
+                      <div class="property-list__item-price">
+                        <span>Sell</span> <span>/month</span>
+                      </div>
+                      <button class="property-list__item-favorite">
+                        <svg
+                          width="48"
+                          height="48"
+                          viewBox="0 0 48 48"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <circle
+                            cx="24"
+                            cy="24"
+                            r="23.25"
+                            fill="white"
+                            stroke="#E8E6F9"
+                            stroke-width="1.5"
+                          />
+                          <path
+                            d="M16.318 18.318C15.9001 18.7359 15.5687 19.232 15.3425 19.778C15.1164 20.3239 15 20.9091 15 21.5C15 22.091 15.1164 22.6762 15.3425 23.2221C15.5687 23.7681 15.9001 24.2642 16.318 24.682L24 32.364L31.682 24.682C32.5259 23.8381 33 22.6935 33 21.5C33 20.3066 32.5259 19.162 31.682 18.318C30.8381 17.4741 29.6935 17 28.5 17C27.3065 17 26.1619 17.4741 25.318 18.318L24 19.636L22.682 18.318C22.2641 17.9002 21.7681 17.5687 21.2221 17.3425C20.6761 17.1164 20.091 17 19.5 17C18.9091 17 18.3239 17.1164 17.7779 17.3425C17.232 17.5687 16.7359 17.9002 16.318 18.318V18.318Z"
+                            stroke="#7065F0"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                    <h3 class="property-list__item-title">Palm Harbor</h3>
+                    <p class="property-list__item-address">
+                      <span>2699 Green Valley,</span> Highland Lake, FL
+                    </p>
+                  </div>
+                  <div class="property-list__item-features">
+                    <div class="property-list__item-feature">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M17.4998 8.98317V6.6665C17.4998 5.2915 16.3748 4.1665 14.9998 4.1665H11.6665C11.0248 4.1665 10.4415 4.4165 9.99984 4.8165C9.55817 4.4165 8.97484 4.1665 8.33317 4.1665H4.99984C3.62484 4.1665 2.49984 5.2915 2.49984 6.6665V8.98317C1.9915 9.4415 1.6665 10.0998 1.6665 10.8332V15.8332H3.33317V14.1665H16.6665V15.8332H18.3332V10.8332C18.3332 10.0998 18.0082 9.4415 17.4998 8.98317ZM11.6665 5.83317H14.9998C15.4582 5.83317 15.8332 6.20817 15.8332 6.6665V8.33317H10.8332V6.6665C10.8332 6.20817 11.2082 5.83317 11.6665 5.83317ZM4.1665 6.6665C4.1665 6.20817 4.5415 5.83317 4.99984 5.83317H8.33317C8.7915 5.83317 9.1665 6.20817 9.1665 6.6665V8.33317H4.1665V6.6665ZM3.33317 12.4998V10.8332C3.33317 10.3748 3.70817 9.99984 4.1665 9.99984H15.8332C16.2915 9.99984 16.6665 10.3748 16.6665 10.8332V12.4998H3.33317Z"
+                          fill="#7065F0"
+                        />
+                      </svg>
+                      <div>3 <span>Beds</span></div>
+                    </div>
+                    <div class="property-list__item-feature">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M17.4998 8.33333H5.83317V5.83333C5.83317 4.91417 6.58067 4.16667 7.49984 4.16667C8.419 4.16667 9.1665 4.91417 9.1665 5.83333H10.8332C10.8332 3.995 9.33817 2.5 7.49984 2.5C5.6615 2.5 4.1665 3.995 4.1665 5.83333V8.33333H2.49984C2.27882 8.33333 2.06686 8.42113 1.91058 8.57741C1.7543 8.73369 1.6665 8.94565 1.6665 9.16667V10.8333C1.6665 13.005 3.0615 14.8525 4.99984 15.5417V18.3333H6.6665V15.8333H13.3332V18.3333H14.9998V15.5417C16.9382 14.8525 18.3332 13.005 18.3332 10.8333V9.16667C18.3332 8.94565 18.2454 8.73369 18.0891 8.57741C17.9328 8.42113 17.7209 8.33333 17.4998 8.33333ZM16.6665 10.8333C16.6665 12.6717 15.1715 14.1667 13.3332 14.1667H6.6665C4.82817 14.1667 3.33317 12.6717 3.33317 10.8333V10H16.6665V10.8333Z"
+                          fill="#7065F0"
+                        />
+                      </svg>
+                      <div>2 <span>Bathrooms</span></div>
+                    </div>
+                    <div class="property-list__item-feature">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_601_1202)">
+                          <path
+                            d="M8.83148 15.5437L3.45631 10.1685C2.8479 9.56011 2.8479 8.43989 3.45631 7.83148L8.83148 2.45631C9.43989 1.8479 10.5601 1.8479 11.1685 2.45631L16.5437 7.83148C17.1521 8.43989 17.1521 9.56011 16.5437 10.1685L11.1685 15.5437C10.5601 16.1521 9.43989 16.1521 8.83148 15.5437V15.5437Z"
+                            stroke="#7065F0"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M2 13.1714L6.36371 17.5351"
+                            stroke="#7065F0"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M13.6362 17.5351L17.9999 13.1714"
+                            stroke="#7065F0"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_601_1202">
+                            <rect width="20" height="20" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <div>5x7 m²</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </div>
+
+          <div class="property-list__more">
+            <button class="btn-dark">Browse more properties</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="features section-offset">
+        <div class="features__header container">
+          <h2>
+            We make it easy for <span>tenants</span> and
+            <span>landlords.</span>
+          </h2>
+          <p>
+            Whether it&rsquo;s selling your current home, getting financing,
+            or&nbsp;buying a&nbsp;new home, we&nbsp;make it&nbsp;easy and
+            efficient. The best part? you&rsquo;ll save a&nbsp;bunch
+            of&nbsp;money and time with our services.
+          </p>
+        </div>
+        <div class="container container--swiper-right">
+          <div class="features__swiper">
+            <div class="features__slide features__slide-dark">
+              <img
+                class="features__slide-img"
+                src="./src/assets/images/features-1.svg"
+                alt="Virtual home tour"
+              />
+              <div class="features__slide-text">
+                <h3>Virtual home tour</h3>
+                <p>
+                  You can communicate directly with landlords and
+                  we&nbsp;provide you with virtual tour before you buy
+                  or&nbsp;rent the property.
+                </p>
+              </div>
+            </div>
+            <div class="features__slide">
+              <img
+                class="features__slide-img"
+                src="./src/assets/images/features-2.svg"
+                alt="Find the best deal"
+              />
+              <div class="features__slide-text">
+                <h3>Find the best deal</h3>
+                <p>
+                  Browse thousands of&nbsp;properties, save your favorites and
+                  set up&nbsp;search alerts so&nbsp;you don&rsquo;t miss the
+                  best home deal!
+                </p>
+              </div>
+            </div>
+            <div class="features__slide features__slide-accent">
+              <img
+                class="features__slide-img"
+                src="./src/assets/images/features-3.svg"
+                alt="Get ready to&nbsp;apply"
+              />
+              <div class="features__slide-text">
+                <h3>Get ready to&nbsp;apply</h3>
+                <p>
+                  Find your dream house? You just need
+                  to&nbsp;do&nbsp;a&nbsp;little to&nbsp;no&nbsp;effort and you
+                  can start move in&nbsp;to&nbsp;your new dream home!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="features__line"></div>
+
+        <div class="container features__stats">
+          <div class="features__stat">
+            <h4>7.4%</h4>
+            <p>Property Return Rate</p>
+          </div>
+          <div class="features__stat">
+            <h4>3,856</h4>
+            <p>Property in&nbsp;Sell &amp;&nbsp;Rent</p>
+          </div>
+          <div class="features__stat">
+            <h4>2,540</h4>
+            <p>Daily Completed Transactions</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="promo section-offset">
+        <div class="container promo__container">
+          <span class="promo__tagline">No Spam Promise</span>
+
+          <h2 class="promo__title">Are you a&nbsp;landlord?</h2>
+          <p class="promo__description">
+            Discover ways to&nbsp;increase your home&rsquo;s value and get
+            listed. No&nbsp;Spam.
+          </p>
+
+          <form action="" class="promo__form">
+            <input
+              type="email"
+              class="promo__form-input"
+              placeholder="Enter your email address"
+            />
+            <button class="promo__form-button btn-second">Submit</button>
+          </form>
+          <p class="promo__subtext">
+            Join&nbsp;<span>10,000+</span> other landlords in&nbsp;our estatery
+            community.
+          </p>
+        </div>
+      </section>
+      <div class="menu-overlay" id="menuOverlay"></div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="container footer__top">
+          <a href="/" class="footer__logo">
+            <img
+              src="./src/assets/images/logo.svg"
+              alt="Logo"
+              class="footer__logo-img"
+            />
+            <span class="footer__logo-text">Estatery</span>
+          </a>
+
+          <ul class="footer__links">
+            <li class="footer__link-item footer__link-item-1">
+              <h2 class="footer__link-title">SELL&nbsp;A HOME</h2>
+              <ul class="footer__sublinks">
+                <li>
+                  <a href="#" class="footer__sublink">Request an offer</a>
+                </li>
+                <li><a href="#" class="footer__sublink">Pricing</a></li>
+                <li><a href="#" class="footer__sublink">Reviews</a></li>
+                <li><a href="#" class="footer__sublink">Stories</a></li>
+              </ul>
+            </li>
+            <li class="footer__link-item footer__link-item-2">
+              <h2 class="footer__link-title">BUY A&nbsp;HOME</h2>
+              <ul class="footer__sublinks">
+                <li><a href="#" class="footer__sublink">Buy</a></li>
+                <li><a href="#" class="footer__sublink">Finance</a></li>
+              </ul>
+            </li>
+            <li class="footer__link-item footer__link-item-3">
+              <h2 class="footer__link-title">BUY, RENT AND SELL</h2>
+              <ul class="footer__sublinks">
+                <li>
+                  <a href="#" class="footer__sublink">
+                    Buy and sell properties
+                  </a>
+                </li>
+                <li><a href="#" class="footer__sublink">Rent home</a></li>
+                <li>
+                  <a href="#" class="footer__sublink">Builder trade-up</a>
+                </li>
+              </ul>
+            </li>
+            <li class="footer__link-item footer__link-item-4">
+              <h2 class="footer__link-title">TERMS & PRIVACY</h2>
+              <ul class="footer__sublinks">
+                <li><a href="#" class="footer__sublink">Trust & Safety </a></li>
+                <li>
+                  <a href="#" class="footer__sublink"> Terms of Service</a>
+                </li>
+                <li><a href="#" class="footer__sublink">Privacy Policy</a></li>
+              </ul>
+            </li>
+            <li class="footer__link-item footer__link-item-5">
+              <h2 class="footer__link-title">ABOUT</h2>
+              <ul class="footer__sublinks">
+                <li><a href="#" class="footer__sublink">Company </a></li>
+                <li><a href="#" class="footer__sublink">How it works</a></li>
+                <li><a href="#" class="footer__sublink">Contact</a></li>
+                <li><a href="#" class="footer__sublink">Investors</a></li>
+              </ul>
+            </li>
+            <li class="footer__link-item footer__link-item-6">
+              <h2 class="footer__link-title">RESOURCES</h2>
+              <ul class="footer__sublinks">
+                <li><a href="#" class="footer__sublink">Blog </a></li>
+                <li><a href="#" class="footer__sublink"> Guides</a></li>
+                <li><a href="#" class="footer__sublink">FAQ</a></li>
+                <li><a href="#" class="footer__sublink"> Help Center</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="container footer__bottom">
+          <p class="footer__copyright">©2024 Estatery. All rights reserved</p>
+
+          <ul class="footer__social-links">
+            <li>
+              <a href="#" class="footer__social-link"
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15.1199 5.32003H16.9999V2.14003C16.0896 2.04538 15.175 1.99865 14.2599 2.00003C11.5399 2.00003 9.67986 3.66003 9.67986 6.70003V9.32003H6.60986V12.88H9.67986V22H13.3599V12.88H16.4199L16.8799 9.32003H13.3599V7.05003C13.3599 6.00003 13.6399 5.32003 15.1199 5.32003Z"
+                    fill="#000929"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="footer__social-link">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17.34 5.46C17.1027 5.46 16.8707 5.53038 16.6733 5.66224C16.476 5.79409 16.3222 5.98151 16.2313 6.20078C16.1405 6.42005 16.1168 6.66133 16.1631 6.89411C16.2094 7.12689 16.3236 7.34071 16.4915 7.50853C16.6593 7.67635 16.8731 7.79064 17.1059 7.83694C17.3387 7.88324 17.5799 7.85948 17.7992 7.76866C18.0185 7.67783 18.2059 7.52402 18.3378 7.32668C18.4696 7.12935 18.54 6.89734 18.54 6.66C18.54 6.34174 18.4136 6.03652 18.1885 5.81147C17.9635 5.58643 17.6583 5.46 17.34 5.46ZM21.94 7.88C21.9206 7.0503 21.7652 6.2294 21.48 5.45C21.2257 4.78313 20.83 4.17928 20.32 3.68C19.8248 3.16743 19.2196 2.77418 18.55 2.53C17.7727 2.23616 16.9508 2.07721 16.12 2.06C15.06 2 14.72 2 12 2C9.28 2 8.94 2 7.88 2.06C7.04915 2.07721 6.22734 2.23616 5.45 2.53C4.78168 2.77665 4.17693 3.16956 3.68 3.68C3.16743 4.17518 2.77418 4.78044 2.53 5.45C2.23616 6.22734 2.07721 7.04915 2.06 7.88C2 8.94 2 9.28 2 12C2 14.72 2 15.06 2.06 16.12C2.07721 16.9508 2.23616 17.7727 2.53 18.55C2.77418 19.2196 3.16743 19.8248 3.68 20.32C4.17693 20.8304 4.78168 21.2234 5.45 21.47C6.22734 21.7638 7.04915 21.9228 7.88 21.94C8.94 22 9.28 22 12 22C14.72 22 15.06 22 16.12 21.94C16.9508 21.9228 17.7727 21.7638 18.55 21.47C19.2196 21.2258 19.8248 20.8326 20.32 20.32C20.8322 19.8226 21.2283 19.2182 21.48 18.55C21.7652 17.7706 21.9206 16.9497 21.94 16.12C21.94 15.06 22 14.72 22 12C22 9.28 22 8.94 21.94 7.88ZM20.14 16C20.1327 16.6348 20.0178 17.2637 19.8 17.86C19.6403 18.2952 19.3839 18.6884 19.05 19.01C18.7256 19.3405 18.3332 19.5964 17.9 19.76C17.3037 19.9778 16.6748 20.0927 16.04 20.1C15.04 20.15 14.67 20.16 12.04 20.16C9.41 20.16 9.04 20.16 8.04 20.1C7.38089 20.1123 6.72459 20.0109 6.1 19.8C5.68578 19.6281 5.31136 19.3728 5 19.05C4.66809 18.7287 4.41484 18.3352 4.26 17.9C4.01586 17.2952 3.88044 16.6519 3.86 16C3.86 15 3.8 14.63 3.8 12C3.8 9.37 3.8 9 3.86 8C3.86448 7.35106 3.98295 6.70795 4.21 6.1C4.38605 5.67791 4.65627 5.30166 5 5C5.30381 4.65617 5.67929 4.3831 6.1 4.2C6.70955 3.98004 7.352 3.86508 8 3.86C9 3.86 9.37 3.8 12 3.8C14.63 3.8 15 3.8 16 3.86C16.6348 3.86728 17.2637 3.98225 17.86 4.2C18.3144 4.36865 18.7223 4.64285 19.05 5C19.3777 5.30718 19.6338 5.68273 19.8 6.1C20.0223 6.70893 20.1373 7.35178 20.14 8C20.19 9 20.2 9.37 20.2 12C20.2 14.63 20.19 15 20.14 16ZM12 6.87C10.9858 6.87198 9.99496 7.17453 9.15265 7.73942C8.31035 8.30431 7.65438 9.1062 7.26763 10.0438C6.88089 10.9813 6.78072 12.0125 6.97979 13.0069C7.17886 14.0014 7.66824 14.9145 8.38608 15.631C9.10392 16.3474 10.018 16.835 11.0129 17.0321C12.0077 17.2293 13.0387 17.1271 13.9755 16.7385C14.9123 16.35 15.7129 15.6924 16.2761 14.849C16.8394 14.0056 17.14 13.0142 17.14 12C17.1413 11.3251 17.0092 10.6566 16.7512 10.033C16.4933 9.40931 16.1146 8.84281 15.6369 8.36605C15.1592 7.88929 14.5919 7.51168 13.9678 7.25493C13.3436 6.99818 12.6749 6.86736 12 6.87ZM12 15.33C11.3414 15.33 10.6976 15.1347 10.15 14.7688C9.60234 14.4029 9.17552 13.8828 8.92348 13.2743C8.67144 12.6659 8.6055 11.9963 8.73398 11.3503C8.86247 10.7044 9.17963 10.111 9.64533 9.64533C10.111 9.17963 10.7044 8.86247 11.3503 8.73398C11.9963 8.6055 12.6659 8.67144 13.2743 8.92348C13.8828 9.17552 14.4029 9.60234 14.7688 10.15C15.1347 10.6976 15.33 11.3414 15.33 12C15.33 12.4373 15.2439 12.8703 15.0765 13.2743C14.9092 13.6784 14.6639 14.0454 14.3547 14.3547C14.0454 14.6639 13.6784 14.9092 13.2743 15.0765C12.8703 15.2439 12.4373 15.33 12 15.33Z"
+                    fill="#000929"
+                  />
+                </svg>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="footer__social-link">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M22 5.80021C21.2483 6.1263 20.4534 6.34187 19.64 6.44021C20.4982 5.92753 21.1413 5.12099 21.45 4.17021C20.6436 4.65027 19.7608 4.98851 18.84 5.17021C18.2245 4.50278 17.405 4.05851 16.5098 3.90706C15.6147 3.75562 14.6945 3.90557 13.8938 4.3334C13.093 4.76123 12.4569 5.44274 12.0852 6.27105C11.7135 7.09935 11.6273 8.0276 11.84 8.91021C10.2094 8.82774 8.61444 8.40316 7.15865 7.66407C5.70287 6.92498 4.41885 5.8879 3.39 4.62021C3.02914 5.25038 2.83952 5.96403 2.84 6.69021C2.83872 7.36459 3.00422 8.02883 3.32176 8.62377C3.63929 9.21872 4.09902 9.72592 4.66 10.1002C4.00798 10.0825 3.36989 9.90751 2.8 9.59021V9.64021C2.80489 10.5851 3.13599 11.4993 3.73731 12.2282C4.33864 12.957 5.17326 13.4559 6.1 13.6402C5.74326 13.7488 5.37287 13.806 5 13.8102C4.74189 13.8072 4.48442 13.7838 4.23 13.7402C4.49391 14.553 5.00462 15.2634 5.69107 15.7724C6.37753 16.2814 7.20558 16.5638 8.06 16.5802C6.6172 17.7155 4.83588 18.3351 3 18.3402C2.66574 18.3413 2.33174 18.3213 2 18.2802C3.87443 19.4905 6.05881 20.1329 8.29 20.1302C9.82969 20.1462 11.3571 19.8552 12.7831 19.2743C14.2091 18.6934 15.505 17.8341 16.5952 16.7467C17.6854 15.6593 18.548 14.3656 19.1326 12.9411C19.7172 11.5166 20.012 9.98994 20 8.45021C20 8.28021 20 8.10021 20 7.92021C20.7847 7.33502 21.4615 6.61763 22 5.80021Z"
+                    fill="#000929"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="footer__social-link">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M20.4701 2.00014H3.53006C3.33964 1.9975 3.15056 2.03239 2.97362 2.10282C2.79669 2.17326 2.63536 2.27786 2.49886 2.41065C2.36235 2.54344 2.25334 2.70182 2.17805 2.87675C2.10276 3.05167 2.06267 3.23972 2.06006 3.43014V20.5701C2.06267 20.7606 2.10276 20.9486 2.17805 21.1235C2.25334 21.2985 2.36235 21.4568 2.49886 21.5896C2.63536 21.7224 2.79669 21.827 2.97362 21.8975C3.15056 21.9679 3.33964 22.0028 3.53006 22.0001H20.4701C20.6605 22.0028 20.8496 21.9679 21.0265 21.8975C21.2034 21.827 21.3648 21.7224 21.5013 21.5896C21.6378 21.4568 21.7468 21.2985 21.8221 21.1235C21.8974 20.9486 21.9375 20.7606 21.9401 20.5701V3.43014C21.9375 3.23972 21.8974 3.05167 21.8221 2.87675C21.7468 2.70182 21.6378 2.54344 21.5013 2.41065C21.3648 2.27786 21.2034 2.17326 21.0265 2.10282C20.8496 2.03239 20.6605 1.9975 20.4701 2.00014ZM8.09006 18.7401H5.09006V9.74014H8.09006V18.7401ZM6.59006 8.48014C6.17632 8.48014 5.77953 8.31578 5.48697 8.02323C5.19442 7.73067 5.03006 7.33388 5.03006 6.92014C5.03006 6.5064 5.19442 6.10961 5.48697 5.81705C5.77953 5.5245 6.17632 5.36014 6.59006 5.36014C6.80975 5.33522 7.03224 5.35699 7.24293 5.42402C7.45363 5.49105 7.6478 5.60183 7.81272 5.7491C7.97763 5.89637 8.10958 6.07682 8.19993 6.27862C8.29028 6.48043 8.33698 6.69904 8.33698 6.92014C8.33698 7.14124 8.29028 7.35985 8.19993 7.56166C8.10958 7.76346 7.97763 7.94391 7.81272 8.09118C7.6478 8.23845 7.45363 8.34923 7.24293 8.41626C7.03224 8.48329 6.80975 8.50505 6.59006 8.48014ZM18.9101 18.7401H15.9101V13.9101C15.9101 12.7001 15.4801 11.9101 14.3901 11.9101C14.0527 11.9126 13.7242 12.0184 13.4489 12.2133C13.1735 12.4082 12.9645 12.6828 12.8501 13.0001C12.7718 13.2352 12.7379 13.4827 12.7501 13.7301V18.7301H9.75006C9.75006 18.7301 9.75006 10.5501 9.75006 9.73014H12.7501V11.0001C13.0226 10.5272 13.419 10.1377 13.8965 9.87334C14.374 9.60902 14.9146 9.47999 15.4601 9.50014C17.4601 9.50014 18.9101 10.7901 18.9101 13.5601V18.7401Z"
+                    fill="#000929"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

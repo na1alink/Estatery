@@ -1,0 +1,11 @@
+@use "../utils/mixins";
+
+.section-offset {
+  padding-top: 100rem;
+  padding-bottom: 100rem;
+
+  @include mixins.breakpoint(medium) {
+    padding-top: 48rem;
+    padding-bottom: 48rem;
+  }
+}

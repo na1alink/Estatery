@@ -1,0 +1,12 @@
+@use "../utils/mixins";
+.container {
+  padding: 0 var(--container-padding);
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+.container--swiper-right {
+  padding-right: 0;
+  @include mixins.breakpoint(medium) {
+    padding: 0 var(--container-padding);
+  }
+}

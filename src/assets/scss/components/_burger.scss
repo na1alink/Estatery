@@ -1,0 +1,42 @@
+@use "../utils/mixins";
+
+.burger {
+  display: none;
+
+  &__line {
+    width: 20rem;
+    height: 2rem;
+    border-radius: 5rem;
+    background-color: var(--black);
+    display: block;
+
+    transition: all 0.3s ease-in-out;
+  }
+
+  @include mixins.breakpoint(medium) {
+    display: block;
+    z-index: 4;
+  }
+}
+
+.burger:hover {
+  cursor: pointer;
+}
+
+.burger__line:nth-child(1) {
+  margin-bottom: 6rem;
+}
+
+.burger__menu {
+  position: absolute;
+  top: 70rem;
+  right: 80rem;
+}
+
+.burger.active .burger__line:nth-child(1) {
+  transform: translateY(4rem) rotate(45deg);
+}
+
+.burger.active .burger__line:nth-child(2) {
+  transform: translateY(-4rem) rotate(-45deg);
+}

@@ -1,0 +1,49 @@
+@use "../utils/mixins";
+@use "../utils/vars" as *;
+
+@include mixins.responsive-font-size(
+  (
+    "small": 375,
+    "medium": 1200,
+    "large": 1440,
+  )
+);
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--white);
+  color: var(--black);
+  font-size: 20rem;
+  font-family: var(--font-family);
+  overflow-x: hidden;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.hidden-item {
+  display: none !important;
+}
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+
+  z-index: 1;
+
+  transition: all 0.4s ease-in-out;
+}
+
+.menu-overlay.visible {
+  opacity: 1;
+  visibility: visible;
+}

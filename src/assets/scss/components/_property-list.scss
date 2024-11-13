@@ -1,0 +1,376 @@
+@use "../utils/mixins";
+.property-list {
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16rem;
+    margin-bottom: 70rem;
+    @include mixins.breakpoint(medium) {
+      margin-bottom: 50rem;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 40rem;
+
+    // line-height: 56px;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+    text-align: center;
+
+    @include mixins.breakpoint(medium) {
+      font-size: 32rem;
+      line-height: 1.25;
+    }
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: 16rem;
+
+    // line-height: 26px;
+    line-height: 1.6;
+    text-align: center;
+    opacity: 0.7;
+  }
+
+  &__actions {
+    display: flex;
+    margin-bottom: 46rem;
+
+    @include mixins.breakpoint(medium) {
+      flex-direction: column;
+
+      gap: 20rem;
+    }
+  }
+
+  &__buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5rem;
+    border: 1.5rem solid #e0def7;
+    border-radius: 8rem;
+    padding: 6rem;
+    width: 377rem;
+
+    background: #f0effb;
+
+    @include mixins.breakpoint(medium) {
+      width: 100%;
+      order: 2;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+    opacity: 0.5;
+    padding: 11rem;
+
+    transition: all 0.3s ease;
+    svg {
+      width: 20rem;
+      height: 20rem;
+    }
+    span {
+      font-weight: 500;
+      font-size: 18rem;
+
+      // line-height: 26px;
+      line-height: 1.45;
+      letter-spacing: -0.01em;
+    }
+
+    &.active {
+      box-shadow: 0 3rem 40rem 0 rgba(14, 8, 84, 0.05);
+      background: #fff;
+      opacity: 1;
+      border: 2rem solid #e0def7;
+      border-radius: 6rem;
+      transition: all 0.3s ease;
+
+      svg path {
+        stroke: var(--accent);
+      }
+
+      span {
+        font-weight: 700;
+
+        color: var(--accent);
+      }
+    }
+    &:hover {
+      box-shadow: 0 3rem 40rem 0 rgba(14, 8, 84, 0.05);
+      background: #fff;
+      opacity: 1;
+      border: 2rem solid #e0def7;
+      border-radius: 6rem;
+
+      svg path {
+        stroke: var(--accent);
+      }
+
+      span {
+        font-weight: 700;
+
+        color: var(--accent);
+      }
+    }
+  }
+
+  &__search {
+    margin-left: auto;
+    position: relative;
+    width: 352rem;
+    @include mixins.breakpoint(medium) {
+      width: 100%;
+      order: 1;
+    }
+
+    &:hover {
+      input {
+        border-color: var(--accent);
+      }
+    }
+
+    svg {
+      position: absolute;
+      left: 15rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 24rem;
+      height: 24rem;
+    }
+    input {
+      padding: 18rem;
+      padding-left: 52rem;
+      border: 2rem solid #e0def7;
+      border-radius: 8rem;
+
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 16rem;
+      width: 100%;
+      line-height: 1.5;
+      color: var(--black);
+
+      &::placeholder {
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 16rem;
+
+        line-height: 1.5;
+        color: var(--black);
+        opacity: 0.5;
+      }
+
+      &:focus,
+      &:active {
+        border-color: var(--accent);
+      }
+    }
+  }
+
+  &__items {
+    display: none;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30rem;
+
+    margin-bottom: 70rem;
+
+    @include mixins.breakpoint(medium) {
+      overflow-x: scroll;
+      margin-bottom: 48rem;
+      scrollbar-width: none;
+    }
+  }
+
+  &__item {
+    border: 1.5rem solid #f0effb;
+    border-radius: 8rem;
+    transition: 0.3s ease-in;
+
+    @include mixins.breakpoint(medium) {
+      width: 300rem;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      border-color: var(--accent);
+    }
+
+    &-link {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    &-image {
+      position: relative;
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 200rem;
+        border-radius: 8rem 8rem 0 0;
+      }
+    }
+
+    &-tag {
+      position: absolute;
+      left: -9rem;
+      bottom: -24rem;
+
+      img {
+        height: 40rem;
+        object-fit: contain;
+      }
+    }
+    &-info {
+      display: flex;
+      flex-direction: column;
+      padding: 30rem 20rem;
+    }
+    &-details {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 12rem;
+      border-bottom: 1.5rem solid #f0effb;
+    }
+
+    &-top {
+      display: flex;
+    }
+    &-price {
+      span {
+        &:first-child {
+          font-weight: 800;
+          font-size: 24rem;
+
+          // line-height: 36px;
+          line-height: 1.5;
+          letter-spacing: -0.04em;
+          color: var(--accent);
+        }
+
+        &:last-child {
+          font-weight: 500;
+          font-size: 16rem;
+
+          // line-height: 24px;
+          line-height: 1.5;
+          opacity: 0.7;
+        }
+      }
+    }
+
+    &-favorite {
+      margin-left: auto;
+      svg {
+        transition: 0.3s ease-in-out;
+      }
+      &:hover,
+      &:active,
+      &.active {
+        svg {
+          path {
+            transition: 0.3s ease-in-out;
+            stroke: var(--accent-dark);
+            fill: var(--accent-dark);
+          }
+          circle {
+            transition: 0.3s ease-in-out;
+            stroke: var(--accent-dark);
+          }
+        }
+      }
+    }
+
+    &-title {
+      font-weight: 700;
+      font-size: 24rem;
+
+      letter-spacing: -0.01em;
+      margin-bottom: 10rem;
+    }
+    &-address {
+      font-weight: 500;
+      font-size: 16rem;
+
+      // line-height: 24px;
+      line-height: 1.5;
+      opacity: 0.7;
+      span {
+        @include mixins.breakpoint(medium) {
+          display: none;
+        }
+      }
+    }
+
+    &-features {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10rem;
+      padding-top: 18rem;
+
+      margin-top: auto;
+
+      @include mixins.breakpoint(medium) {
+        justify-content: flex-start;
+        padding-top: 15rem;
+        gap: 18rem;
+      }
+    }
+    &-feature {
+      display: flex;
+      align-items: center;
+      gap: 8rem;
+
+      svg {
+        width: 20rem;
+        height: 20rem;
+      }
+
+      div {
+        font-weight: 500;
+        font-size: 14rem;
+
+        // line-height: 20px;
+        line-height: 1.4;
+        opacity: 0.7;
+        span {
+          @include mixins.breakpoint(medium) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &__more {
+    display: flex;
+
+    justify-content: center;
+    width: 100%;
+
+    button {
+      max-width: 253rem;
+      padding: 15rem;
+      font-size: 16rem;
+
+      @include mixins.breakpoint(medium) {
+        max-width: 100%;
+      }
+    }
+  }
+}

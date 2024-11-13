@@ -1,0 +1,140 @@
+@use "../utils/mixins";
+
+.promo {
+  background: linear-gradient(
+    90deg,
+    rgba(247, 247, 253, 0.5) 0%,
+    #f7f7fd 50.17%,
+    rgba(247, 247, 253, 0.5) 100%
+  );
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__tagline {
+    font-weight: 700;
+    font-size: 24rem;
+
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+    text-align: center;
+    color: var(--accent);
+    margin-bottom: 10rem;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 40rem;
+
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+    margin-bottom: 16rem;
+    text-align: center;
+    @include mixins.breakpoint(medium) {
+      font-size: 32rem;
+
+      line-height: 1.25;
+    }
+  }
+
+  &__description {
+    font-weight: 500;
+    font-size: 16rem;
+
+    line-height: 1.6;
+    text-align: center;
+    opacity: 0.7;
+    margin-bottom: 32rem;
+
+    @include mixins.breakpoint(medium) {
+      margin-bottom: 46rem;
+    }
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+
+    width: 543rem;
+
+    position: relative;
+
+    margin-bottom: 20rem;
+    border-radius: 8rem;
+
+    @include mixins.breakpoint(medium) {
+      width: 100%;
+      flex-direction: column;
+      margin-bottom: 26rem;
+      gap: 16rem;
+    }
+
+    &-input {
+      padding: 27rem;
+      width: 100%;
+      background: var(--white);
+      font-weight: 500;
+      font-size: 18rem;
+      border: 2rem solid var(--white);
+      border-radius: 8rem;
+      // line-height: 26px;
+      line-height: 1.45;
+      letter-spacing: -0.01em;
+      cursor: pointer;
+
+      transition: 0.3s ease;
+
+      @include mixins.breakpoint(medium) {
+        padding: 14rem 22rem;
+      }
+
+      &::placeholder {
+        font-weight: 500;
+        font-size: 18rem;
+
+        // line-height: 26px;
+        line-height: 1.45;
+        letter-spacing: -0.01em;
+        color: var(--black);
+        opacity: 0.5;
+      }
+      &:hover,
+      &:focus,
+      &:active {
+        border-color: var(--accent);
+      }
+    }
+
+    &-button {
+      position: absolute;
+      right: 15rem;
+      top: 50%;
+      transform: translateY(-50%);
+      max-width: 136rem;
+      height: 45rem;
+
+      @include mixins.breakpoint(medium) {
+        transform: none;
+        position: static;
+        max-width: 100%;
+      }
+    }
+  }
+
+  &__subtext {
+    font-weight: 500;
+    font-size: 14rem;
+
+    // line-height: 20px;
+    line-height: 1.4;
+    text-align: center;
+    color: #9ea3ae;
+
+    span {
+      color: #7065f0;
+    }
+  }
+}

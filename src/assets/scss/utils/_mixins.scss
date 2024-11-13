@@ -1,0 +1,123 @@
+@use "sass:string";
+
+@mixin responsive-font-size($breakpoints) {
+  @each $breakpoint, $size in $breakpoints {
+    @if $breakpoint == "small" {
+      @media (max-width: 767px) {
+        html {
+          font-size: string.unquote("calc(100vw / #{$size})");
+        }
+      }
+    } @else if $breakpoint == "medium" {
+      @media (min-width: 768px) and (max-width: 1200px) {
+        html {
+          font-size: string.unquote("calc(100vw / #{$size})");
+        }
+      }
+    } @else if $breakpoint == "large" {
+      @media (min-width: 1201px) {
+        html {
+          font-size: string.unquote("calc(100vw / #{$size})");
+        }
+      }
+    }
+  }
+}
+
+@mixin breakpoint($point) {
+  @if $point == small {
+    @media (max-width: 400px) {
+      @content;
+    }
+  } @else if $point == medium {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if $point == large {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+}
+
+@mixin button-base(
+  $background,
+  $border-color,
+  $color,
+  $hover-background,
+  $hover-border-color,
+  $hover-color,
+  $active-background,
+  $active-border-color,
+  $active-color
+) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+  white-space: nowrap;
+
+  background: $background;
+  border: 2rem solid $border-color;
+  border-radius: 8rem;
+
+  width: 100%;
+
+  line-height: 1.5;
+  text-align: center;
+  color: $color;
+
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: $hover-background;
+    border-color: $hover-border-color;
+    color: $hover-color;
+  }
+
+  &:active {
+    background: $active-background;
+    border-color: $active-border-color;
+    color: $active-color;
+  }
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-center-column {
+  @include flex-center;
+  flex-direction: column;
+}
+
+@mixin flex-center-vert {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-center-horiz {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin font-face($font-name, $path, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: quote($font-name);
+    src: url($path + ".eot");
+    src: url($path + ".eot?#iefix") format("embedded-opentype"),
+      url($path + ".woff") format("woff"),
+      url($path + ".ttf") format("truetype"),
+      url($path + ".svg##{$font-name}") format("svg");
+    font-weight: $weight;
+    font-style: $style;
+  }
+}

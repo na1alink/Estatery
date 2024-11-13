@@ -1,0 +1,56 @@
+@use "../utils/mixins";
+
+.btn {
+  @include mixins.button-base(
+    transparent,
+    #e0def7,
+    var(--black),
+    var(--accent),
+    var(--accent),
+    var(--white),
+    var(--gray),
+    var(--gray),
+    var(--white)
+  );
+  padding: 12rem 24rem;
+
+  font-weight: 700;
+  font-size: 16rem;
+}
+
+.btn-second {
+  @include mixins.button-base(
+    var(--accent),
+    var(--accent),
+    var(--white),
+    var(--white),
+    #e0def7,
+    var(--black),
+    var(--white),
+    #e0def7,
+    var(--black)
+  );
+  padding: 12rem 24rem;
+
+  font-weight: 700;
+  font-size: 16rem;
+}
+
+.btn-dark {
+  @include mixins.button-base(
+    var(--accent-dark),
+    var(--accent-dark),
+    var(--white),
+    var(--accent),
+    var(--accent),
+    var(--white),
+    var(--accent),
+    var(--accent),
+    var(--white)
+  );
+  padding: 8rem 10rem;
+  max-width: 160rem;
+
+  font-weight: 700;
+  font-size: 14rem;
+}

@@ -1,0 +1,30 @@
+:root {
+  --container-width: 1440rem;
+  --container-padding: 160rem;
+
+  --font-family: "Plus Jakarta Sans", sans-serif;
+  --second-family: "Circular Std", sans-serif;
+  --third-family: "Montserrat", sans-serif;
+
+  --white: #fff;
+  --black: #000929;
+  --text: #4d5461;
+  --gray: #e0def7;
+  --accent-dark: #100a55;
+  --accent-ligth: #e0def7;
+  --accent: #7065f0;
+}
+
+@media (max-width: 1200px) {
+  :root {
+    --container-padding: 40rem;
+    --container-padding-min: 80rem;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --container-padding: 25rem;
+    --container-padding-min: 20rem;
+  }
+}
